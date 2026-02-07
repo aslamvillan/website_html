@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>In Media – Mohammed Aslam Villan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <div class="logo">ASLAM VILLAN</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="research.html" class="nav-link">Research</a>
+          <a href="in-media.html" class="nav-link active">In Media</a>
+          <a href="news.html" class="nav-link">News</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="hero"
+        style="background-image: url('images/hero/hero-in-media.jpg')"
+      >
+        <div class="hero-inner">
+          <h1 class="hero-title">In Media</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="media-grid">
+            <!-- 1: Smart Water Magazine -->
+            <article class="media-card">
+              <img
+                src="images/in_media/new_solar.png"
+                alt="New solar desalination design tackles salt buildup barrier"
+              />
+              <div class="media-card-body">
+                <div class="media-source">Smart Water Magazine</div>
+                <div class="media-title">
+                  New solar desalination design tackles salt buildup barrier
+                </div>
+                <a
+                  class="media-link"
+                  href="https://smartwatermagazine.com/news/smart-water-magazine/new-solar-desalination-design-tackles-salt-buildup-barrier"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+
+            <!-- 2: Australian Manufacturing -->
+            <article class="media-card">
+              <img
+                src="images/in_media/Researchers develop solar-powered_australian.png"
+                alt="Researchers develop solar-powered desalination system to produce continuous drinking water"
+              />
+              <div class="media-card-body">
+                <div class="media-source">Australian Manufacturing</div>
+                <div class="media-title">
+                  Researchers develop solar-powered desalination system to
+                  produce continuous drinking water
+                </div>
+                <a
+                  class="media-link"
+                  href="https://www.australianmanufacturing.com.au/researchers-develop-solar-powered-desalination-system-to-produce-continuous-drinking-water/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+
+            <!-- 3: Mirage News -->
+            <article class="media-card">
+              <img
+                src="images/in_media/solar_desalination.png"
+                alt="Solar Desalination Breakthrough: No More Salt Clogs"
+              />
+              <div class="media-card-body">
+                <div class="media-source">Mirage News</div>
+                <div class="media-title">
+                  Solar Desalination Breakthrough: No More Salt Clogs
+                </div>
+                <a
+                  class="media-link"
+                  href="https://www.miragenews.com/solar-desalination-breakthrough-no-more-salt-1605788/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+
+            <!-- 4: Medianet / Newshub -->
+            <article class="media-card">
+              <img
+                src="images/in_media/researhers_develop.png"
+                alt="Researchers develop solar-powered desalination system that overcomes salt-clogging barrier"
+              />
+              <div class="media-card-body">
+                <div class="media-source">Medianet / Newshub</div>
+                <div class="media-title">
+                  Researchers develop solar-powered desalination system that
+                  overcomes widespread salt-clogging barrier
+                </div>
+                <a
+                  class="media-link"
+                  href="https://newshub.medianet.com.au/2026/01/researchers-develop-solar-powered-desalination-system-that-overcomes-widespread-salt-clogging-barrier/136674/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Mohammed Aslam Villan. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile hamburger menu toggle
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("main-nav");
+        if (!toggle || !nav) return;
+
+        function closeMenu() {
+          toggle.classList.remove("menu-toggle--open");
+          nav.classList.remove("nav-open");
+        }
+
+        toggle.addEventListener("click", function () {
+          toggle.classList.toggle("menu-toggle--open");
+          nav.classList.toggle("nav-open");
+        });
+
+        var navLinks = nav.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              closeMenu();
+            }
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+

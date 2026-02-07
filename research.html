@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Research – Mohammed Aslam Villan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <div class="logo">ASLAM VILLAN</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="research.html" class="nav-link active">Research</a>
+          <a href="in-media.html" class="nav-link">In Media</a>
+          <a href="news.html" class="nav-link">News</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="hero"
+        style="background-image: url('images/hero/hero-research.jpg')"
+      >
+        <div class="hero-inner">
+          <h1 class="hero-title">Research</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card-list">
+            <article class="card">
+              <div class="card-image">
+                <img
+                  src="images/research/research-1.jpg"
+                  alt="Engineering of meso-micro porous nanocarbon assemblies"
+                />
+              </div>
+              <div class="card-content">
+                <h3>Engineering of Meso‑Micro Porous Assembly of Nanocarbons</h3>
+                <div class="card-meta">
+                  Developing advanced carbon nanomaterials with controlled
+                  meso‑micro porous structures for enhanced energy storage
+                  applications.
+                </div>
+                <p>
+                  We engineer nanocarbon assemblies with hierarchical porosity at
+                  both meso and micro scales to optimize ion transport and charge
+                  storage. By tailoring pore size distribution, connectivity, and
+                  surface chemistry, we aim to realize high‑performance electrode
+                  materials for next‑generation energy storage devices.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <img
+                  src="images/research/research-2.jpg"
+                  alt="Photothermal conversion strategies for energy storage"
+                />
+              </div>
+              <div class="card-content">
+                <h3>Photothermal Conversion Strategies for Energy Storage</h3>
+                <div class="card-meta">
+                  Exploring innovative photothermal conversion mechanisms in
+                  nanocarbon assemblies for efficient solar energy harvesting and
+                  storage.
+                </div>
+                <p>
+                  This work focuses on leveraging photothermal effects in
+                  nanocarbon materials to convert solar energy into thermal
+                  energy, and subsequently store it in electrochemical systems. We
+                  investigate material design, light–matter interactions, and
+                  device architectures that couple photothermal conversion with
+                  energy storage.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Mohammed Aslam Villan. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile hamburger menu toggle
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("main-nav");
+        if (!toggle || !nav) return;
+
+        function closeMenu() {
+          toggle.classList.remove("menu-toggle--open");
+          nav.classList.remove("nav-open");
+        }
+
+        toggle.addEventListener("click", function () {
+          toggle.classList.toggle("menu-toggle--open");
+          nav.classList.toggle("nav-open");
+        });
+
+        var navLinks = nav.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              closeMenu();
+            }
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+

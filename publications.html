@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Publications – Mohammed Aslam Villan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <div class="logo">ASLAM VILLAN</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="publications.html" class="nav-link active">Publications</a>
+          <a href="research.html" class="nav-link">Research</a>
+          <a href="in-media.html" class="nav-link">In Media</a>
+          <a href="news.html" class="nav-link">News</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="hero"
+        style="background-image: url('images/hero/hero-publications.jpg')"
+      >
+        <div class="hero-inner">
+          <h1 class="hero-title">Publications</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card-list">
+            <article class="card">
+              <div class="card-image">
+                <img
+                  src="images/publications/publication-1.jpg"
+                  alt="Ultrathin, Unsinkable, Janus‑Faced Solar–Thermal Interfacial Evaporator"
+                />
+              </div>
+              <div class="card-content">
+                <h3>
+                  Ultrathin, Unsinkable, Janus‑Faced Solar–Thermal Interfacial
+                  Evaporator for High‑Throughput Seawater Distillation and
+                  Solar‑Water Production
+                </h3>
+                <div class="card-meta">
+                  <div>
+                    <strong>Authors:</strong> Mohammed Aslam Villan, Amrutha
+                    Suresh, Mukund Misra, Cintia Naranjo Ruiz, Neil R. Cameron,
+                    Sandip K. Saha, Subramaniam Chandramouli
+                  </div>
+                  <div><strong>Journal:</strong> Advanced Science</div>
+                  <div><strong>Date:</strong> 21 October 2025</div>
+                  <div><strong>Pages:</strong> e11600</div>
+                </div>
+                <a
+                  class="card-link"
+                  href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202511600"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read ↗</a
+                >
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <img
+                  src="images/publications/publication-2.jpg"
+                  alt="Photothermally Enhanced Ion‑Transport in Solid‑State Energy Storage Devices"
+                />
+              </div>
+              <div class="card-content">
+                <h3>
+                  Photothermally Enhanced Ion‑Transport in Solid‑State, Non‑Faradic
+                  Energy Storage Devices for Sub‑Freezing Operability
+                </h3>
+                <div class="card-meta">
+                  <div>
+                    <strong>Authors:</strong> Mohammed Aslam Villan, Arnab
+                    Chowdhury, Bradyn J. Parker, Bhupesh Bhardwaj, Neil R.
+                    Cameron, Chandramouli Subramaniam
+                  </div>
+                  <div><strong>Journal:</strong> Chemical Engineering Journal</div>
+                  <div><strong>Volume:</strong> 500</div>
+                  <div><strong>Pages:</strong> 156617</div>
+                  <div><strong>Date:</strong> 15 November 2024</div>
+                </div>
+                <a
+                  class="card-link"
+                  href="https://www.sciencedirect.com/science/article/pii/S1385894724081087"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read ↗</a
+                >
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-image">
+                <img
+                  src="images/publications/publication-3.jpg"
+                  alt="Interplay of Physical and Textural Properties in Porous Hard‑Carbons"
+                />
+              </div>
+              <div class="card-content">
+                <h3>
+                  Interplay of Physical and Textural Properties in Porous,
+                  Nanostructured Hard‑Carbons as Electrode Materials for
+                  Non‑Faradic Energy Storage Devices
+                </h3>
+                <div class="card-meta">
+                  <div>
+                    <strong>Authors:</strong> Mohammed Aslam Villan, Dipin
+                    Thacharakkal, Subramaniam Chandramouli
+                  </div>
+                  <div>
+                    <strong>Journal:</strong> Journal of Energy Storage
+                  </div>
+                  <div><strong>Volume:</strong> 99</div>
+                  <div><strong>Pages:</strong> 113415</div>
+                  <div><strong>Date:</strong> 10 October 2024</div>
+                </div>
+                <a
+                  class="card-link"
+                  href="https://www.sciencedirect.com/science/article/pii/S2352152X24030019"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Mohammed Aslam Villan. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile hamburger menu toggle
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("main-nav");
+        if (!toggle || !nav) return;
+
+        function closeMenu() {
+          toggle.classList.remove("menu-toggle--open");
+          nav.classList.remove("nav-open");
+        }
+
+        toggle.addEventListener("click", function () {
+          toggle.classList.toggle("menu-toggle--open");
+          nav.classList.toggle("nav-open");
+        });
+
+        var navLinks = nav.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              closeMenu();
+            }
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+

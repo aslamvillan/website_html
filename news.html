@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>News – Mohammed Aslam Villan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <div class="logo">ASLAM VILLAN</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="research.html" class="nav-link">Research</a>
+          <a href="in-media.html" class="nav-link">In Media</a>
+          <a href="news.html" class="nav-link active">News</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="hero"
+        style="background-image: url('images/hero/hero-news.jpg')"
+      >
+        <div class="hero-inner">
+          <h1 class="hero-title">News &amp; Highlights</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card-list">
+            <article class="card">
+              <h3>
+                Solar‑Powered Interfacial Evaporator Developed by Mohammed Aslam
+                Villan and Team
+              </h3>
+              <p>
+                Coverage on a high‑throughput solar‑thermal interfacial
+                evaporator enabling efficient seawater distillation and
+                solar‑water production.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>
+                Advancing Photothermal Energy Storage Through Nanocarbon
+                Engineering
+              </h3>
+              <p>
+                News feature on photothermally enhanced ion‑transport in
+                solid‑state energy storage devices for sub‑freezing operability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Mohammed Aslam Villan. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile hamburger menu toggle
+      (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("main-nav");
+        if (!toggle || !nav) return;
+
+        function closeMenu() {
+          toggle.classList.remove("menu-toggle--open");
+          nav.classList.remove("nav-open");
+        }
+
+        toggle.addEventListener("click", function () {
+          toggle.classList.toggle("menu-toggle--open");
+          nav.classList.toggle("nav-open");
+        });
+
+        var navLinks = nav.querySelectorAll(".nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              closeMenu();
+            }
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+
